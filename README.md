@@ -71,20 +71,41 @@ We are now at the last part of step by step guide on how to simulate STM32 proje
 
 
 ## STM 32 CUBE PROGRAM :
+#include "main.h"
+#include "lcd.h"
 
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+int main(void)
+{
+  HAL_Init();
+  SystemClock_Config();
+  MX_GPIO_Init();
+ 
+  Lcd_PortType ports[] ={GPIOA,GPIOA,GPIOA,GPIOA};
+  Lcd_PinType pins[]={GPIO_PIN_3,GPIO_PIN_2,GPIO_PIN_1,GPIO_PIN_0};
+  Lcd_HandleTypeDef lcd;
+ 
+  lcd = Lcd_create(ports,pins,GPIOB,GPIO_PIN_0,GPIOB,GPIO_PIN_1,LCD_4_BIT_MODE);
+  Lcd_cursor(&lcd,0,1);
+  Lcd_string(&lcd, "DEPT-AIML");
+
+  while (1)
+  {
+	  Lcd_cursor(&lcd,1,1);
+	  Lcd_string(&lcd,"AUGUSTINE J");
+  }
+}
 
 
 
 ## Output screen shots of proteus  :
-
-
-
+![WhatsApp Image 2023-05-02 at 11 29 53](https://user-images.githubusercontent.com/119404460/235590692-b69564aa-9638-45ec-823a-07d3ec2490c3.jpg)
 
 ## Proteus layout(Add pdf screen shot of circuit here)
- 
- 
- 
- 
+![Screenshot 2023-05-02 113251](https://user-images.githubusercontent.com/119404460/235591503-aed8f259-3ccf-4ca9-9c97-ac10261a5ce0.png)
+
+
 ## Result :
 Interfacing a digital output and digital input  with ARM microcontroller are simulated in proteus and the results are verified.
 
