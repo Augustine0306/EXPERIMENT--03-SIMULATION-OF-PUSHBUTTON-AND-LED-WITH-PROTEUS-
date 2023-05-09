@@ -105,6 +105,8 @@ int main(void)
 ![image](https://user-images.githubusercontent.com/119404460/237003122-7c391195-98db-4a91-b298-e0294fd604c7.png)
 
 ## Proteus layout(Add pdf screen shot of circuit here):
+![image](https://user-images.githubusercontent.com/119404460/237007181-dcfd1eff-760a-4ee2-a379-943dc07deeb7.png)
+
 ### WHEN LED IS ON:
 ![image](https://user-images.githubusercontent.com/119404460/237003613-bbbbfe58-8a98-43e5-94ac-ca74f4fe5077.png)
 
